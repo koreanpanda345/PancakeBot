@@ -3,7 +3,7 @@ import { botID, cache } from "../../deps.ts";
 import { createCommand } from "../utils/helpers.ts";
 
 createCommand({
-  name: `stats`,
+  name: `botstats`,
   guildOnly: true,
   execute: (message) => {
     let totalMemberCount = 0;

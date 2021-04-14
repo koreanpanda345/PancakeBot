@@ -1,5 +1,5 @@
 import { Sabr, SabrTable } from "../../deps.ts";
-import { ClientSchema, GuildSchema, UserSchema } from "./schemas.ts";
+import {ClientSchema, CurrentDraftSchema, GuildSchema, UserSchema} from "./schemas.ts";
 import { loadLanguages } from "./../utils/langHelper.ts";
 
 // Create the database class
@@ -11,6 +11,7 @@ export const db = {
   client: new SabrTable<ClientSchema>(sabr, "client"),
   guilds: new SabrTable<GuildSchema>(sabr, "guilds"),
   users: new SabrTable<UserSchema>(sabr, "users"),
+  current_draft: new SabrTable<CurrentDraftSchema>(sabr, "current_draft")
 };
 
 // This is important as it prepares all the tables.
